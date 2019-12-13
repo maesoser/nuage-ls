@@ -1,18 +1,18 @@
 # nuage-nsg
 
-This tool let you query VSD about an NSG or an specific group of NSGs and returns to you the configuration of the matched NSGs.
+This tool let you query VSD about an [NSG](http://bootstrap.nuagenetworks.net/) or an specific group of NSGs and returns to you the configuration of the matched NSGs.
 
 This tool gives you information about:
 
-    - VSCs configured on an specific NSG
-    - TPM Version and status
-    - NSG IP address and status
-    - NSG location
-    - NSG Enterprise Name and description
-    - Network port configuration
-    - Network side BGP configuration
-    - Access port configuration
-    - Active alarms on that NSG
+- [VSCs](https://nuagenetworks.github.io/vsd-api-documentation/v5_0/infrastructurevscprofile.html) configured on an specific NSG
+- TPM Version and status.
+- NSG IP address and status.
+- NSG [location](https://nuagenetworks.github.io/vsd-api-documentation/v5_0/location.html).
+- NSG Enterprise Name and description.
+- Network port configuration.
+- Network side BGP configuration.
+- Access port configuration.
+- Active [alarms](https://nuagenetworks.github.io/vsd-api-documentation/v5_0/alarm.html) on that NSG.
 
 
 ```
