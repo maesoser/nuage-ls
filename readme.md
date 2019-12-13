@@ -8,14 +8,15 @@ This tool gives you information about:
 - TPM Version and status.
 - NSG IP address and status.
 - NSG [location](https://nuagenetworks.github.io/vsd-api-documentation/v5_0/location.html).
-- NSG Enterprise Name and description.
+- NSG Enterprise name and description.
 - Network port configuration.
 - Network side BGP configuration.
 - Access port configuration.
 - Active [alarms](https://nuagenetworks.github.io/vsd-api-documentation/v5_0/alarm.html) on that NSG.
 
 
-```
+```bash
+./nuage-nsg -h
 
 Usage of nsg-ls:
 
@@ -53,7 +54,7 @@ Usage of nsg-ls:
 
 ```
 
-```
+```bash
 ./nuage-nsg -f "Lab1" -vsc -uplink -port -detail -alarm
 
 NSG: NSG_Lab1_Nokia
