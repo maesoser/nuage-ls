@@ -2,16 +2,18 @@
 
 This tool let you query VSD about an [NSG](http://bootstrap.nuagenetworks.net/) or an specific group of NSGs and returns to you the configuration of the matched NSGs.
 
+A Network Services Gateway (NSG) is a SD-WAN capable router made by [Nuage Networks](https://www.nuagenetworks.net/) that is able to interconect the local networks of multiple sites belonging to the same company without the need to use expensive MPLS networks. It also simplifies its management by following the SDN principles.
+
 This tool gives you information about:
 
 - [VSCs](https://nuagenetworks.github.io/vsd-api-documentation/v5_0/infrastructurevscprofile.html) configured on an specific NSG
 - TPM Version and status.
-- NSG IP address and status.
-- NSG [location](https://nuagenetworks.github.io/vsd-api-documentation/v5_0/location.html).
-- NSG Enterprise name and description.
-- Network port configuration.
+- NSG IP addresses and operational status.
+- NSG phisical [location](https://nuagenetworks.github.io/vsd-api-documentation/v5_0/location.html).
+- NSG enterprise name and description.
+- Network sie interface configuration.
 - Network side BGP configuration.
-- Access port configuration.
+- Access (LAN) side interface configuration.
 - Active [alarms](https://nuagenetworks.github.io/vsd-api-documentation/v5_0/alarm.html) on that NSG.
 
 
@@ -66,6 +68,7 @@ NSG: NSG_Lab1_Nokia
         TPM: ENABLED_OPERATIONAL        TPM Ver: 1.2.4.43
         SystemID: 104.145.233.147        Address: 8.5.17.2
         Model: NSG_X                    Version: Nuage NSG 5.4.1_148
+        
         VSC: labvsc01
                 Status: UP                      Version: C-5.4.1-148
                 IPs: [10.10.10.11 10.0.0.11 192.168.1.11]
@@ -78,6 +81,7 @@ NSG: NSG_Lab1_Nokia
         VSC: labvsc04
                 Status: UP                      Version: C-5.4.1-148
                 IPs: [10.10.11.11 10.0.1.12 192.168.2.12]
+                
         Uplink: port1.0
                 Underlay: MPLS
                 Mode: Static                    Role: PRIMARY
@@ -88,6 +92,7 @@ NSG: NSG_Lab1_Nokia
         Uplink: port2.0
                 Underlay: Internet
                 Mode: Dynamic                   Role: SECONDARY
+                
         Port: port3.0   (RG)
                 Name: Test_Port_RG
                 L3: Test_Domain_1
@@ -99,6 +104,6 @@ NSG: NSG_Lab1_Nokia
                     ServiceID  : 4º2000472
                     Network: 10.5.5.0/24       Gateway: 10.5.5.1
         Alarms:
-                [2019-08-09 13:26:22 +0200 CEST] Port [port2] of gateway [NSG_Lab1_Nokia] with system-id [104.145.233.147] is down.
-                [2019-08-01 08:17:15 +0200 CEST] Gateway Instance is not using [4] ports
+                [2019-08-09 13:26:22] Port [port2] of gateway [NSG_Lab1_Nokia] with system-id [104.145.233.147] is down.
+                [2019-08-01 08:17:15] Gateway Instance is not using [4] ports
 ```
